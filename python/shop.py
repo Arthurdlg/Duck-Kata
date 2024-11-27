@@ -10,7 +10,7 @@ class Address:
     country: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class User:
     name: str
     email: str
@@ -25,7 +25,6 @@ class Shop:
         if user.age <= 18:
             return False
         if not user.verified:
-            # return True
             return False
         else:
             return True
