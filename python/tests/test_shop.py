@@ -9,13 +9,6 @@ def test_happy_path(default_user):
 
 
 def test_minors_cannot_order_from_the_shop(default_user):
-    # user = User(
-    #     name="bob",
-    #     email="bob@domain.tld",
-    #     age=16,
-    #     address=fsf_address,
-    #     verified=True,
-    # )
     user = default_user
     user.age = 16
 
@@ -23,13 +16,6 @@ def test_minors_cannot_order_from_the_shop(default_user):
 
 
 def test_cannot_order_if_not_verified(default_user):
-    # user = User(
-    #     name="bob",
-    #     email="bob@domain.tld",
-    #     age=16,
-    #     address=fsf_address,
-    #     verified=False,
-    # )
     user = default_user
     user.verified = False
 
@@ -37,13 +23,6 @@ def test_cannot_order_if_not_verified(default_user):
 
 
 def test_foreigners_must_be_foreign_fee(default_user, paris_address):
-    # user = User(
-    #     name="bob",
-    #     email="bob@domain.tld",
-    #     age=25,
-    #     address=paris_address,
-    #     verified=False,
-    # )
     user = default_user
     user.address = paris_address
 
