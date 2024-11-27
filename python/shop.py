@@ -10,7 +10,7 @@ class Address:
     country: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class User:
     name: str
     email: str
