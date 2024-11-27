@@ -25,7 +25,8 @@ class Shop:
         if user.age <= 18:
             return False
         if not user.verified:
-            return True
+            # return True
+            return False
         else:
             return True
 
