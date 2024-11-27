@@ -1,16 +1,4 @@
-import pytest
-from shop import Shop, User
-
-
-@pytest.fixture
-def default_user(fsf_address):
-    return User(
-        name="bob",
-        email="bob@domain.tld",
-        age=25,
-        address=fsf_address,
-        verified=True,
-    )
+from shop import Shop
 
 
 def test_happy_path(default_user):
