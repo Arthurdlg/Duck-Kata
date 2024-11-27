@@ -1,4 +1,4 @@
-from shop import Shop, User
+from python.shop import Shop, User
 
 
 def test_happy_path(fsf_address):
